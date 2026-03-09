@@ -1,0 +1,38 @@
+/* Exact styles from STUDENT LEAVE REQUEST SYSTEM CODE-23html.html */
+* { margin:0; padding:0; box-sizing:border-box; font-family:Arial; }
+body { height:100vh; display:flex; overflow: hidden; }
+
+.left { width:40%; background:#9ac56b; display:flex; justify-content:center; align-items:center; }
+.left img { width:300px; }
+
+.right { width:60%; background:#f3f3f3; display:flex; justify-content:center; align-items:center; padding: 20px; }
+        
+.card {
+    background:white; width:450px; padding:30px; border-radius:12px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2); text-align:center;
+}
+
+.header img { height:40px; margin:5px; }
+.portal-title { font-size:18px; font-weight:bold; color:#2d6a4f; margin-bottom:20px; }
+h2 { color:#5c8f1f; margin-bottom:20px; }
+
+/* Form Elements */
+input, textarea, select { width:100%; padding:12px; margin:8px 0; border-radius:6px; border:1px solid #ccc; }
+button { width:100%; padding:12px; background:#5c8f1f; border:none; color:white; font-size:16px; border-radius:6px; cursor:pointer; margin-top:10px; }
+button:hover { background:#4c7818; }
+        
+.links-container { margin-top:10px; color:red; font-size:13px; cursor: pointer; }
+.hidden { display: none; }
+.logout-btn { background: #d00000; width: auto; padding: 5px 15px; float: right; margin-bottom: 10px; }
+
+/* Dashboard Table Styles */
+.table-wrap { max-height: 350px; overflow-y: auto; margin-top: 20px; }
+table { width:100%; border-collapse:collapse; background:white; font-size: 11px; }
+th, td { padding:8px; border:1px solid #ddd; text-align:center; }
+th { background:#2d6a4f; color:white; position: sticky; top: 0; }
+        
+.approved { color:green; font-weight:bold; }
+.rejected { color:red; font-weight:bold; }
+.pending { color:orange; font-weight:bold; }
+        
+.remark-input { width: 90%; padding: 4px; font-size: 10px; margin-bottom: 4px; border: 1px solid #aaa; }

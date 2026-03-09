@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KLH Student Leave Portal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="left">
+    <img src="klh-emblem.png" alt="KLH Emblem">
+</div>
+
+<div class="right">
+    
+    <div class="card" id="loginSection">
+        <div class="header">
+            <img src="klh-logo.png" alt="KLH Logo">
+            <img src="klh-logo.png" alt="KLH Logo">
+        </div>
+        <div class="portal-title">STUDENT LEAVE APPROVE PORTAL</div>
+        <h2>Login</h2>
+        <select id="loginRole">
+            <option value="student">Student</option>
+            <option value="admin">Admin</option>
+        </select>
+        <input type="text" id="loginUser" placeholder="Enter Username">
+        <input type="password" id="loginPass" placeholder="Enter Password">
+        <button onclick="login()">Login</button>
+        <div class="links-container" onclick="showSection('registerSection')">
+            <p>Need an account? Register here</p>
+        </div>
+    </div>
+
+    <div class="card hidden" id="registerSection">
+        <h2>Create Account</h2>
+        <select id="registerRole">
+            <option value="student">Student</option>
+            <option value="admin">Admin</option>
+        </select>
+        <input type="text" id="regUser" placeholder="Choose Username">
+        <input type="password" id="regPass" placeholder="Choose Password">
+        <button onclick="register()">Register Account</button>
+        <div class="links-container" onclick="showSection('loginSection')">Back to Login</div>
+    </div>
+
+    <div class="card hidden" id="portalSection" style="width: 98%; max-width: 850px;">
+        <button class="logout-btn" onclick="location.reload()">Logout</button>
+        <h2 id="dashTitle">Portal</h2>
+
+        <div id="studentUI">
+            <h3>Apply for Leave</h3>
+            <input type="text" id="applyName" placeholder="Full Name">
+            <input type="text" id="applyRoll" placeholder="Roll Number">
+            <div style="display:flex; gap:5px;">
+                <input type="date" id="applyFrom">
+                <input type="date" id="applyTo">
+            </div>
+            <textarea id="applyReason" placeholder="Reason for leave"></textarea>
+            <button onclick="submitLeave()">Submit Request</button>
+            <hr style="margin:20px 0">
+            <h3>My Request History</h3>
+            <input type="text" id="viewRoll" placeholder="Enter Roll to check status">
+            <button style="background:#2d6a4f" onclick="viewMyRequests()">Check History</button>
+        </div>
+
+        <div id="adminUI" class="hidden">
+            <input type="text" id="search" placeholder="Search by Roll Number" onkeyup="displayRequests()">
+        </div>
+
+        <div class="table-wrap">
+            <table id="leaveTable" class="hidden"></table>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
